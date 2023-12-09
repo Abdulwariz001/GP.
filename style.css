@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: poppins;
 }
 
 .bg-back{
     background-image: linear-gradient(rgba(0, 0, 0, 0.525), rgba(0, 0, 0, 0.626)),url(images/hero-bg.jpg);
     background-attachment: fixed;
-    background-position: top;
+    background-position: top ;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -48,12 +48,15 @@
 
 .start button{
     padding: 8px 30px;
+    transition: .7s ease-in-out;
     border-radius: 7px;
     background-color: transparent;
     border: 2px solid goldenrod;
     color: white;
     font-size: 15px;
+  
 }
+
 
 .start button:hover{
     background-color: goldenrod;
@@ -67,9 +70,9 @@
     margin: 0 12px;
 }
 
-.bar{
-    background: rgba(0, 0, 0, 0.9);
-  
+#navbar{
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
 }
 
 .nav-item a:hover{
@@ -77,10 +80,11 @@
     font-weight: 500;
 }
 
+
 .bg-txt{
     text-align: center;
-
 }
+
 
 .txt-mid{
     text-align: center;
@@ -149,7 +153,7 @@
     padding: 0;
     transition: 1s ease;
     margin: 12px;
-    border: 1px groove #ebebeb;
+    border: 1px groove #696565;
 }
 
 
@@ -187,10 +191,6 @@
     color: grey;
     background-color: transparent;
 }
-/* 
-#diff{
-   background-color: gold;
-} */
 
 .caro button:hover{
     background-color: gold;
@@ -202,14 +202,6 @@
 }
 
 
-
-.caro2 button{
-    /* padding: 6px;
-    margin: 5px;
-    background-color: gray;
-    border-radius: 50%;
-    border: none; */
-}
 
 .pro-txt i{
     font-size: 35px;
@@ -245,30 +237,32 @@
     width: 10%;
     padding: 18px;
     margin: 13px;
-   border-top: 1px solid gold;
+    border-top: 1px solid gold;
 }
 
 .box{
     margin: -20px;
-    padding: 23px 20px;
+    padding: 20px;
+    border: 2px solid whitesmoke;
+    transition: 0.4s ease;
 }
 
 .box:hover{
     border: none;
-    transform: scale(1.02);
-    transition: 0.2s ease-in;
-    background-color: transparent;
-    box-shadow: 5px 5px 4px 5px gainsboro;
+    transform: translateY(-10px);
+    border: none;
+    background-color:white;
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.1);
 }
 
-.box h4:hover{
+.box:hover h4{
     color: gold;
 }
 
 .box h4{
     text-align: center;
-    transition: 1m ease-in-out;
-    font-weight: bold;
+    transition: .5s ease-in-out;
+    font-weight: bolder;
     font-size: 22px;
     margin-top: 18px;
 }
@@ -282,58 +276,67 @@
 
 .icon-txt i{
     font-size: 23px;
+    padding: 17px;
+    border-radius:5px;
+    background-color: rgb(239, 186, 50);
 }
 
 .icon-txt{
-    margin: auto;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    background-color: rgb(239, 186, 50);
-    padding: 20px;
-    border-radius: 5px;
-
+    text-align: center;
 }
+
 
 .card-pic ul li{
     list-style-type: none;
     display: inline-block;
+    
 }
 
 .card-pic{
    text-align: center;
 }
 
-#all{
-    background-color: rgb(220, 164, 21);
+.card-pic ul li .active{
+    background-color: rgba(239, 171, 0, 0.784);
     color: black;
-    border-radius: 7px;
+    border-radius:4px;
 }
 
-.card-pic a{
-    padding:12px;
-    margin: 15px 10px;
+.card-pic ul li a{
     text-decoration: none;
     transition: 0.2s ease-in;
-    font-weight: bold;
+    font-weight: bolder;
+    padding:5px 18px;
     color: black;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .card-pic li a:hover{
-    background-color: rgb(220, 164, 21);
+    background-color: rgba(239, 171, 0, 0.784);
     color: black;
-    border-radius: 7px;
+    border-radius:4px;
 }
 
-.port img{
+.porty img{
     filter: brightness(100%);
+    transition: all 0.4s ease-in;
 
 }
 
-.port img:hover{
+.porty{
+    overflow: hidden;
+    position: relative;
+   
+    
+    
+}
+
+
+
+.porty img:hover{
     filter: brightness(50%);
-    transform: scale(1.08);
-    transition: 0.2s ease-in;
+  
+   
     
 }
 
@@ -375,10 +378,43 @@
 
 .user-main{
     margin: -34px;
+    position: relative;
     border: none;
     border-radius: 7px;
     background-color: white;
-    box-shadow: 2px 2px 2px 2px whitesmoke;
+    box-shadow: 0 0 10px rgb(169, 162, 162); 
+}
+
+.user-main:hover .user-link{
+
+    opacity: 1;
+    height: 50%;
+
+    
+}
+
+.user-link{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    overflow: hidden;
+    height:0;
+    width: 100%;
+    transition:1s ease-out;
+}
+.user-link a i{
+    color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all .4s ease;
+    font-size: 18px;
+    background-color: white;
+}
+
+.user-link a i:hover{
+    color: black;
+    background-color: gold;
+
 }
 
 .contact i{
@@ -441,20 +477,21 @@
 }
 
 .foot-contact h6{
-    font-weight: bold;
+    font-weight: 500;
     color: white;
+    font-size: 14px;
 }
 
+.foot-icon i{
+    margin: 0 5px;
+    transition: .4s ease-in;
 
-.foot-icon a{
-    color: gray;
-    margin: 0 6px;
-  
 }
 
 .foot-icon i:hover{
     background-color: goldenrod;
     color: black;
+    transform: translateY(-7px);
 
 }
 
@@ -465,7 +502,7 @@
 }
 
 .sub input{
-    width: 70%;
+    width: 100%;
     border: 1px solid gainsboro;
     outline: none;
     border-top-left-radius: 6px;
@@ -475,12 +512,11 @@
 
 .sub button{
     border: none;
-    position: relative;
-    right: 3px;
-    padding: 6px;
+    padding: 6px 23px;
+    font-size: 14px;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-color: gold;
+    background-color: goldenrod;
 }
 
 .useful i{
@@ -488,6 +524,11 @@
     color: gold;
 }
 
+
+.useful h5{
+    color: white;
+    font-size: 17px;
+}
 
 
 .foot-icon i{
@@ -499,13 +540,17 @@
     padding: 9px;
 }
 
+.foot-info{
+    background-color: rgb(26, 25, 25);
+    border-bottom: 1px solid rgb(61, 56, 45);
+}
 
 
 
 
 
 
-
+/* media screen */
 
 @media screen and (max-width:768px) {
 .bg-back{
@@ -514,7 +559,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 230vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -598,12 +643,18 @@
 
 
 .sub input{
-    width: 60%;
+    width: 100%;
     border: 1px solid gainsboro;
     outline: none;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     padding: 6px;
+}
+
+.sub{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
 }
 
 .text-pic p{
@@ -639,8 +690,8 @@
 }
 .box{
     
-    padding-left: 0;
-    width: 100%;
+    margin: auto;
+    margin-bottom: 18px;
     padding: 0;
 }
 
@@ -648,6 +699,68 @@
 .carousel-item img{
     width: 50%;
 }
+
+
+.bg-txt h3{
+    font-size: 38px;
+    line-height: 53px;
+    
+}
+
+.bg-txt p{
+    font-size: 19px;
+    margin: 43px;
+    margin-top: 18px;
+}
+
+.con-name{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.contact-form input{
+    width: 98%;
+    border: 1px solid gainsboro;
+    outline: none;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+
+.subject input[type=text]{
+    width: 98%;
+    border: 1px solid gainsboro;
+    outline: none;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+
+
+
+
+.foot-icon i{
+    font-size: 12px;
+    color: white;
+    transition: 1s ease;
+    border: none;
+    background-color: black;
+    border-radius: 6px;
+    padding: 9px;
+}
+
+
+.box-bod{
+    padding: 0;
+    height: 150px;
+    transition: 1s ease;
+    margin: 10px 0;
+    border: 1px groove #ebebeb;
+}
+
+
 
 
 
